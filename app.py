@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import joblib
@@ -12,7 +13,13 @@ st.write("Upload a batch of raw truck sensor telemetry to identify imminent Air 
 # The @st.cache_resource decorator keeps the model in memory so it doesn't reload on every click
 @st.cache_resource
 def load_pipeline():
-    return joblib.load('models/scania_lgbm_pipeline.pkl')
+    # Find the exact directory where this app.py file is running
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Attach 'models' and the filename to create a bulletproof path
+    model_path = os.path.join(base_dir, 'models', 'scania_lgbm_pipeline.pkl')
+
+    return joblib.load(model_path)
 
 
 pipeline = load_pipeline()

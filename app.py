@@ -19,7 +19,7 @@ def load_pipeline():
     # Attach 'models' and the filename to create a bulletproof path
     model_path = os.path.join(base_dir, 'models', 'scania_lgbm_pipeline.pkl')
 
-    return joblib.load(model_path)
+    return joblib.load('scania_lgbm_pipeline.pkl')
 
 
 pipeline = load_pipeline()

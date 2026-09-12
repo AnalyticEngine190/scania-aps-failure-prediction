@@ -3,8 +3,6 @@
 
 👉 **[Live Interactive Dashboard: Try the Fleet Maintenance Predictor Here](https://scania-aps-failure-prediction-g25sfbgnhe4ecjjzcmbvnz.streamlit.app)**
 
-![Streamlit App Screenshot](image_571384.png)
-
 ### 📌 The TL;DR
 I built a machine learning pipeline to predict when the Air Pressure System (APS) in Scania heavy trucks is about to fail, using a massive dataset of anonymized sensor telemetry. 
 
